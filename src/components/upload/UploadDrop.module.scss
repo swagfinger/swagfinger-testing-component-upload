@@ -1,0 +1,103 @@
+.UploadDrop {
+  .DropWrapper {
+    position: relative;
+    padding: 15px;
+    border: 1px dashed grey;
+    border-radius: 1px;
+    background-color: white;
+    display: flex;
+    flex-grow: 1;
+    flex-basis: 1;
+    flex-direction: column;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    text-align: left;
+    color: gray;
+    input {
+      display: none;
+    }
+    button {
+      margin-left: 5px;
+      text-align: left;
+      color: grey;
+      font: inherit;
+      font-size: 16px;
+      &.Hidden {
+        display: none;
+      }
+    }
+    &.Dragging {
+      background-color: grey;
+      color: white;
+    }
+    @media only screen and (min-width: 480px) {
+      flex-direction: row;
+    }
+  }
+  .UploadLabel {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: grey;
+    font-size: 1rem;
+    .Icon {
+      margin-right: 1rem; //calc(var(--margindefault) * 0.5);
+      color: grey;
+    }
+  }
+
+  .UploadList {
+    ul {
+      margin-top: calc(1rem * 0.5);
+    }
+    li {
+      box-sizing: border-box;
+      display: block;
+      border-radius: 0;
+      border: 1px solid grey;
+      border-top: none;
+      border-bottom: 1px solid grey;
+      background-color: white;
+      margin-bottom: 0px;
+      &:first-of-type {
+        border-top: 1px solid grey;
+        border-top-left-radius: 1rem;
+        border-top-right-radius: 1rem;
+      }
+      &:last-of-type {
+        border-bottom-left-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+      }
+    }
+  }
+}
+
+.UploadInteraction {
+  display: flex;
+  flex-direction: row;
+  align-self: stretch;
+  box-sizing: border-box;
+  flex-basis: 1;
+  flex-shrink: 0;
+  .UploadProgress {
+    display: block;
+    margin-right: 1rem;
+    align-self: center;
+  }
+
+  .Divider {
+    box-sizing: border-box;
+    background-color: grey;
+    align-self: stretch;
+    width: 1px;
+    margin: calc(1rem * 0.5) 0px;
+  }
+
+  .UploadDelete {
+    align-self: center;
+    box-sizing: border-box;
+  }
+}

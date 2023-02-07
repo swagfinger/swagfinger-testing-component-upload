@@ -1,0 +1,61 @@
+.UploadListItem {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-grow: 0;
+  flex-shrink: 1;
+  justify-content: space-between;
+  flex-basis: 1;
+  box-sizing: border-box;
+}
+
+.UploadDetails {
+  padding: var(--paddinginput);
+  display: flex;
+  flex-shrink: 1;
+  flex-direction: column;
+  box-sizing: border-box;
+  max-width: 50%;
+  .Label {
+    font-size: var(--fontsizedefault);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex-shrink: 1;
+    flex-basis: 1;
+    box-sizing: border-box;
+  }
+  .FileSize {
+    color: var(--colorplaceholder);
+    font-size: var(--fontsizedefault);
+  }
+  @media (min-width: 320px) {
+    max-width: 80%;
+  }
+}
+
+.UploadInteraction {
+  display: flex;
+  flex-direction: row;
+  align-self: stretch;
+  box-sizing: border-box;
+  flex-basis: 1;
+  flex-shrink: 0;
+  .UploadProgress {
+    display: block;
+    margin-right: var(--margindefault);
+    align-self: center;
+  }
+
+  .Divider {
+    box-sizing: border-box;
+    background-color: var(--colorborder);
+    align-self: stretch;
+    width: 1px;
+    margin: calc(var(--margindefault) * 0.5) 0px;
+  }
+
+  .UploadDelete {
+    align-self: center;
+    box-sizing: border-box;
+  }
+}
